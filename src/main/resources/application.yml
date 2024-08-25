@@ -1,0 +1,32 @@
+app:
+  security:
+    crypto:
+      secret:
+        key: 12j1Wm2HxODljlV;
+    jwt:
+      expiration-time: 1
+      secret:
+        key: oUION6OSTVL3RqjfDZI3i3TFXSwBwepHzmgv9AAG1lOKhDxwvySrEjbrDxB4TxaU3jRuUDZFIdwBT15UxXXgKgyR7M0OEUW6XLl5
+server:
+  port: 7001
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: DBAdmin
+    url: jdbc:h2:mem:UserInfoDB
+    username: sa
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: false
+  main:
+    allow-bean-definition-overriding: true
+  output:
+    ansi:
+      enabled: always
